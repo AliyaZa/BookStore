@@ -1,0 +1,16 @@
+﻿@model BookStore.Models.Book
+@using BookStore.Models;
+
+@{ #line 3 "C:\Users\User\source\repos\BookStore\BookStore\Views\Home\Create.cshtml"
+                /**/
+
+
+                Book myBook = new Book { Name = "Test", Author = "author", Price = 1 };
+}
+
+@using (@Html.BeginForm())
+{
+    @Html.EditorFor(m => myBook)
+    @Html.EditorForModel();
+    <input type="submit" value="Submit" />
+}

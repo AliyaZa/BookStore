@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>История запросов</h3>
+    <table>
+        <tr class="header">
+            <td><p>a</p></td>
+            <td><p>h</p></td>
+            <td><p>s</p></td>
+            <td><p>Date</p></td>
+            <td></td>
+        </tr>
+
+
+        @foreach (var sq in ViewBag.Squares)
+        {
+            <tr>
+                <td><p>@sq.a</p></td>
+                <td><p>@sq.h</p></td>
+                <td><p>@sq.s1</p></td>
+                <td><p>@sq.Date</p></td>
+            </tr>
+        }
+
+
+
+        <tr class="header">
+            <td><a href="/Home/Index">Главная</a></td>
+        </tr>
+
+
+    </table>
+</div>

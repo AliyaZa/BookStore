@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Распродажа книг</h3>
+    <table>
+        <tr class="header">
+            <td><p>Название книги</p></td>
+            <td><p>Автор</p></td>
+            <td><p>Цена</p></td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.Books)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Author</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
+            </tr>
+        }
+
+        <tr class="header">
+            <td><a href="/Home/SquareOf">Площадь треугольника</a></td>
+        </tr>
+
+        <tr class="header">
+            <td><a href="/Home/IndexSquares">История вычислений</a></td>
+        </tr>
+
+        <tr class="header">
+            <td><a href="/Home/IndexPurchased">Произведенные заказы</a></td>
+        </tr>
+
+        <tr class="header">
+            <td><a href="/Home/GetImage">Книги</a></td>
+        </tr>
+
+        <tr class="header">
+            <td><a href="/Home/GetHtml">Привет, мир!</a></td>
+        </tr>
+
+        <tr class="header">
+            <td><a href="/Home/IndexContext">HttpContext</a></td>
+        </tr>
+
+
+    </table>
+</div>
